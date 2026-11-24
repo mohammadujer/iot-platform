@@ -24,9 +24,7 @@ import {
 import "./App.css";
 
 // Automatically uses the hostname from which the dashboard is opened.
-const API_BASE = `http://${window.location.hostname}:8000`;
-
-const CHART_COLORS = [
+const API_BASE = import.meta.env.VITE_API_BASE_URL || `http://${window.location.hostname}:8000`;const CHART_COLORS = [
   "#38bdf8",
   "#22c55e",
   "#f97316",
